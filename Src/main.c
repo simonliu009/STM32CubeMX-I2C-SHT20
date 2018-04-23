@@ -37,6 +37,8 @@
   ******************************************************************************
   */
 /* Includes ------------------------------------------------------------------*/
+
+
 #include "main.h"
 #include "stm32f1xx_hal.h"
 #include "i2c.h"
@@ -44,6 +46,13 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
+/*
+ * To support float in printf(), need to change the following setting in system workbench(Eclipse):
+ * project properties > C/C++ Build > Settings > Tool Settings (TAB) > MCU GCC Linker > Miscellaneous > Linker flags
+
+  change "-specs=nosys.specs -specs=nano.specs" to "-specs=nosys.specs -specs=nano.specs -u _printf_float"
+ *
+ * */
 #include "sht20.h"
 /* USER CODE END Includes */
 
